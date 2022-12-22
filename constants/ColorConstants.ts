@@ -6,6 +6,7 @@ export const Colors = {
     light3: '#fdffcb',
     light4: '#f6f7e1',
     lightText: "#eee",
+    greyText: "#bbb",
     darkText: '#333',
     primaryLight: '#faa498',
 }
