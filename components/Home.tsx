@@ -33,6 +33,7 @@ export default function Home() {
                         android_ripple={{
                             color: Colors.primary,
                             radius: 20,
+                            borderless: true,
                         }}>
                         <AntDesign name="search1" style={styles.searchIcon} />
                     </Pressable>
