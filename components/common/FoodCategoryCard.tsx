@@ -3,9 +3,7 @@ import {
     Text,
     StyleSheet,
     ImageBackground,
-    ListRenderItemInfo,
     Pressable,
-    TouchableOpacity,
 } from 'react-native';
 import React from 'react';
 import { FoodCategory } from '../../types/foodCategory';
@@ -19,23 +17,23 @@ const FoodCategoryCard: React.FC<FoodCategoryProps> = ({ foodData }) => {
     return (
         <Pressable
             android_ripple={{
-                // borderless: true,
                 foreground: true,
-                // radius: 70,
                 color: '#eee'
             }}
             style={styles.container}>
-            <ImageBackground
-                imageStyle={{
-                    borderRadius: 12,
-                }}
-                resizeMode="cover"
-                source={foodData.image}
-                style={styles.image}>
-                <View style={styles.imageTextContainer}>
-                    <Text style={styles.imageText}>{foodData.category}</Text>
-                </View>
-            </ImageBackground>
+            <View style={styles.boxShadowContainer}>
+                <ImageBackground
+                    imageStyle={{
+                        borderRadius: 12,
+                    }}
+                    resizeMode="cover"
+                    source={foodData.image}
+                    style={styles.image}>
+                    <View style={styles.imageTextContainer}>
+                        <Text style={styles.imageText}>{foodData.category}</Text>
+                    </View>
+                </ImageBackground>
+            </View>
         </Pressable>
     );
 };
@@ -46,12 +44,18 @@ const styles = StyleSheet.create({
         width: 150,
         margin: 5,
         borderRadius: 12,
+        
+    },
+    boxShadowContainer: {
+        flex: 1,
+        borderRadius: 12,
+        elevation: 5,
     },
     image: {
         flex: 1,
     },
     imageTextContainer: {
-        backgroundColor: 'rgba(0, 0, 0, 0.2)',
+        backgroundColor: 'rgba(0, 0, 0, 0.3)',
         flex: 1,
         borderRadius: 12,
         alignItems: 'center',

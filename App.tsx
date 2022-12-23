@@ -25,7 +25,7 @@ const App = () => {
             headerTitleStyle: {
               fontSize: 22,
             },
-            // statusBarColor: Colors.primary,
+            statusBarColor: Colors.primary,
             contentStyle: {
               backgroundColor: Colors.light4
             }
